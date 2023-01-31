@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MainPage from "./components/MainPage";
+import MoviesImages from "./components/MoviesImages";
+import AnimatedImages from "./components/AnimatedImages";
+import DogImages from "./components/DogImages";
+import GotImages from "./components/GotImages";
 import './App.css';
 
+
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<MainPage />}></Route>
+          <Route exact path="/anime" element={<AnimatedImages />}></Route>
+          <Route exact path="/dog" element={<DogImages />}></Route>
+          <Route exact path="/movies" element={<MoviesImages />}></Route>
+          <Route exact path="/gameofthrones" element={<GotImages />}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

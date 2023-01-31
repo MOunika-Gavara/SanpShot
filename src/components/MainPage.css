@@ -1,0 +1,18 @@
+.nav {
+    background-color: black;
+    color: white;
+    margin-left: 10px;
+}
+
+.nav:hover {
+    color: #0288d1;
+}
+
+.search {
+    color: red;
+}
+
+img {
+    width: 250px;
+    height: 250px;
+}
